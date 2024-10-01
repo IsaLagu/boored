@@ -1,0 +1,15 @@
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 9px 19px;
+    border-style: none;
+    border-radius: 25px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .tag:hover {
+    background-color: rgb(126, 66, 221);
+    color: #f0f0f0;
+  }
