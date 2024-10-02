@@ -1,5 +1,5 @@
 .tag-list {
     display: flex;
-    gap: 7px;
     margin-bottom: 40px;
+    align-items: center;
 }

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Header } from "./Header";
 import { Button } from "../../components/button/Button";
@@ -6,17 +7,35 @@ import { Filter } from "./Filter";
 import useGet from "../../hooks/useGet";
 
 export const Home = () => {
-  const { data, loading, error, executeGet } = useGet(`/random`);
+  const { data: randomData, loading: randomLoading, error: randomError, executeGet: getRandom } = useGet(`/random`);
+
+  const [filter, setFilter] = useState(null);
+
+  const {
+    data: filterData,
+    loading: filterLoading,
+    error: filterError,
+    executeGet: getFiltered,
+  } = useGet(`/filter?type=${filter}`);
+
   const handleSearch = () => {
-    executeGet();
+    if (filter) {
+      getFiltered();
+    } else {
+      getRandom();
+    }
   };
+
+  useEffect(() => {
+    getRandom();
+  }, []);
 
   return (
     <>
       <Header />
       <div className="container">
         <section className="sectionSearch">
-          <Filter />
+          <Filter value={filter} onChange={setFilter} />
           <img src={logo} className="logo" />
           <div className="wrapper">
             <div className="textSearch"> TROBA ALGUNA COSA A FER</div>
@@ -25,12 +44,12 @@ export const Home = () => {
         </section>
         <section className="sectionActivity">
           <div className="activitat">Activitat:</div>
-          {loading ? (
+          {randomLoading || filterLoading ? (
             <div className="randomActivity">Cargando...</div>
-          ) : error ? (
-            <div className="randomActivity">Error: {error}</div>
+          ) : randomError || filterError ? (
+            <div className="randomActivity">Error al cargar los datos: {randomError || filterError}</div>
           ) : (
-            <div className="randomActivity">{data?.activity}</div>
+            <div className="randomActivity">{filter ? filterData?.[0].activity : randomData?.activity}</div>
           )}
         </section>
       </div>

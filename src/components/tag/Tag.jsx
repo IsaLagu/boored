@@ -1,8 +1,8 @@
 import "./tag.css";
 
-export const Tag = ({ onClick, children }) => {
+export const Tag = ({ onClick, children, selected }) => {
   return (
-    <span className="tag" onClick={onClick}>
+    <span className={`tag${selected ? " selected" : ""}`} onClick={onClick}>
       {children}
     </span>
   );

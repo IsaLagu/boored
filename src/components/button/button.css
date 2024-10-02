@@ -7,6 +7,7 @@
     text-align: center;
     font-size: small;
     letter-spacing: 0.5px;
+    cursor: pointer;
   }
   
   .button:hover {
