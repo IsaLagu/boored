@@ -6,7 +6,7 @@ import { Filter } from "./Filter";
 import useGet from "../../hooks/useGet";
 
 export const Home = () => {
-  const { data, loading, error, executeGet } = useGet(`/random`, false);
+  const { data, loading, error, executeGet } = useGet(`/random`);
   const handleSearch = () => {
     executeGet();
   };

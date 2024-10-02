@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-//import { API_URL } from "../config";
 
 const useFetch = (endpoint, options, shouldFetch = true) => {
   const [data, setData] = useState(null);
@@ -14,7 +13,7 @@ const useFetch = (endpoint, options, shouldFetch = true) => {
 
     setLoading(true);
     try {
-      const response = await fetch(`https://bored-api.appbrewery.com${endpoint}`, { ...options, ...fetchOptions });
+      const response = await fetch(`api${endpoint}`, { ...options, ...fetchOptions });
 
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
