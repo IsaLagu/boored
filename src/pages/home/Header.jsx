@@ -1,5 +1,5 @@
 import "./header.css";
-import boored from "../../../public/boored.png";
+import boored from "/boored.png";
 
 export const Header = () => {
   return (

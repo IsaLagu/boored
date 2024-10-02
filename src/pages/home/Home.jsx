@@ -1,7 +1,7 @@
 import "./home.css";
 import { Header } from "./Header";
 import { Button } from "../../components/button/Button";
-import logo from "../../../public/logo.png";
+import logo from "/logo.png";
 import { Filter } from "./Filter";
 import useGet from "../../hooks/useGet";
 
