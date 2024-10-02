@@ -18,8 +18,30 @@ Este proyecto es una aplicación web desarrollada en React que muestra actividad
 - **CSS3**
 - [**Jira**](https://isalagu.atlassian.net/jira/software/projects/BR/list?direction=DESC&sortBy=updated&atlOrigin=eyJpIjoiMWZhMzZiZTQ1NDcwNGU3NzkyNjg3MTc1NDg2ZmNlN2MiLCJwIjoiaiJ9): Herramienta utilizada para gestionar historias de usuario y tareas del proyecto.
 
-## Instalación
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
+  git clone https://github.com/IsaLagu/boored
 ```
+
+Go to the project directory
+
+```bash
+  cd boored
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Roadmap
+
+- Diseño: Ajustar estilos para reproducir fielmente el diseño original.
+
+## Autora
+
+- [Isabel Afonso](https://www.linkedin.com/in/isabel-afonso-guizado/)
