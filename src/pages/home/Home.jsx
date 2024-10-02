@@ -1,10 +1,16 @@
 import "./home.css";
 import { Header } from "./Header";
 import { Button } from "../../components/button/Button";
-import logo from "../../../public/logo.png";
+import logo from "/logo.png";
 import { Filter } from "./Filter";
+import useGet from "../../hooks/useGet";
 
 export const Home = () => {
+  const { data, loading, error, executeGet } = useGet(`/random`);
+  const handleSearch = () => {
+    executeGet();
+  };
+
   return (
     <>
       <Header />
@@ -14,12 +20,18 @@ export const Home = () => {
           <img src={logo} className="logo" />
           <div className="wrapper">
             <div className="textSearch"> TROBA ALGUNA COSA A FER</div>
-            <Button>Generar</Button>
+            <Button onClick={handleSearch}>Generar</Button>
           </div>
         </section>
         <section className="sectionActivity">
           <div className="activitat">Activitat:</div>
-          <div className="randomActivity">Tag a friend you haven't talked to in a long time</div>
+          {loading ? (
+            <div className="randomActivity">Cargando...</div>
+          ) : error ? (
+            <div className="randomActivity">Error: {error}</div>
+          ) : (
+            <div className="randomActivity">{data?.activity}</div>
+          )}
         </section>
       </div>
     </>
