@@ -6,7 +6,7 @@ Este proyecto es una aplicación web desarrollada en React que muestra actividad
 
 ## Demo
 
-[Demostración](./gif/demo_boored_gif.gif)
+![demo_boored_gif](https://github.com/user-attachments/assets/936f129e-c19d-4fc3-b731-c7c5d2fc1acf)
 
 ## Características
 
@@ -20,7 +20,8 @@ Este proyecto es una aplicación web desarrollada en React que muestra actividad
 
 - **React**: "^18.3.1"
 - **CSS3**
-- [**Jira**](https://isalagu.atlassian.net/jira/software/projects/BR/list?direction=DESC&sortBy=updated&atlOrigin=eyJpIjoiMWZhMzZiZTQ1NDcwNGU3NzkyNjg3MTc1NDg2ZmNlN2MiLCJwIjoiaiJ9): Herramienta utilizada para gestionar historias de usuario y tareas del proyecto.
+- **Jira**: Herramienta utilizada para gestionar historias de usuario y tareas del proyecto.
+  ![Jira](https://github.com/user-attachments/assets/33d36fde-d1db-49a0-9ac7-70ccfdc320ce)
 
 ## Run Locally
 
