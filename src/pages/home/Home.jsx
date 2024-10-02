@@ -9,15 +9,15 @@ export const Home = () => {
     <>
       <Header />
       <div className="container">
-        <Filter />
-        <section>
+        <section className="sectionSearch">
+          <Filter />
           <img src={logo} className="logo" />
           <div className="wrapper">
             <div className="textSearch"> TROBA ALGUNA COSA A FER</div>
             <Button>Generar</Button>
           </div>
         </section>
-        <section>
+        <section className="sectionActivity">
           <div className="activitat">Activitat:</div>
           <div className="randomActivity">Tag a friend you haven't talked to in a long time</div>
         </section>
