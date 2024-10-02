@@ -4,6 +4,10 @@
 
 Este proyecto es una aplicación web desarrollada en React que muestra actividades sugeridas para combatir el aburrimiento.
 
+## Demo
+
+[Demostración](./gif/demo_boored_gif.gif)
+
 ## Características
 
 - **Conexión con API**: Obtención de actividades aleatorias utilizando la API [Bored API](https://bored-api.appbrewery.com/).
