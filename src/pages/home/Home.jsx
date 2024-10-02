@@ -49,7 +49,9 @@ export const Home = () => {
           ) : randomError || filterError ? (
             <div className="randomActivity">Error al cargar los datos: {randomError || filterError}</div>
           ) : (
-            <div className="randomActivity">{filter ? filterData?.[0].activity : randomData?.activity}</div>
+            <div className="randomActivity">
+              {filter ? filterData?.[Math.floor(Math.random() * filterData.length)].activity : randomData?.activity}
+            </div>
           )}
         </section>
       </div>
